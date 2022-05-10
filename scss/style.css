@@ -1,0 +1,113 @@
+@media screen and (min-width: 800px) {
+  body {
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
+  }
+  button {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 20%;
+  }
+  button:hover {
+    background-color: #ffffff;
+    color: #000;
+  }
+  .mainContent {
+    background: url("/img/photo1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 1fr;
+        grid-template-columns: 2fr 1fr;
+  }
+  .mainContent .leftMainContent {
+    background-color: transparent;
+  }
+  .mainContent .leftMainContent h2 {
+    color: #00e1ff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    margin: 5%;
+    margin-left: 20%;
+    text-shadow: 2px -2px 2px #000000;
+  }
+  .mainContent .rightMainContent {
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100vh;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .mainContent .rightMainContent ul {
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+    padding: 0;
+    margin-top: 7%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    width: 100%;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .mainContent .rightMainContent ul li {
+    float: left;
+  }
+  .mainContent .rightMainContent ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0.2rem;
+  }
+  .mainContent .rightMainContent ul li:hover a {
+    color: #00e1ff;
+  }
+  .mainContent .rightMainContent h1 {
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 55px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20%;
+  }
+  .mainContent .rightMainContent p {
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    text-align: left;
+    margin: 10%;
+  }
+  .mainContent .rightMainContent .contact {
+    text-align: center;
+    margin-left: 60%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
