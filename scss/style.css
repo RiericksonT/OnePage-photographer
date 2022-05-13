@@ -50,7 +50,7 @@
     margin-left: 20%;
     text-shadow: 2px -2px 2px #000000;
   }
-  .mainContent .rightMainContent {
+  .mainContent main {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100vh;
     height: 100%;
@@ -62,7 +62,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .mainContent .rightMainContent ul {
+  .mainContent main ul {
     font-family: 'Quicksand', sans-serif;
     list-style: none;
     padding: 0;
@@ -78,20 +78,20 @@
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .mainContent .rightMainContent ul li {
+  .mainContent main ul li {
     float: left;
   }
-  .mainContent .rightMainContent ul li a {
+  .mainContent main ul li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
     padding: 0.2rem;
   }
-  .mainContent .rightMainContent ul li:hover a {
+  .mainContent main ul li:hover a {
     color: #b63551;
   }
-  .mainContent .rightMainContent h1 {
+  .mainContent main h1 {
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
     font-size: 55px;
@@ -99,63 +99,55 @@
     text-align: center;
     margin-top: 20%;
   }
-  .mainContent .rightMainContent p {
+  .mainContent main p {
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
     font-size: 25px;
     text-align: left;
     margin: 10%;
   }
-  .mainContent .rightMainContent .contact {
+  .mainContent main .contact {
     text-align: center;
     margin-left: 60%;
   }
   .aboutmeContent {
     background-color: transparent;
     width: 100%;
-    height: 100%;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .aboutmeContent .leftAboutmeContent {
-    display: inline-block;
-    width: 25%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 0.3fr 1fr;
+        grid-template-columns: 1fr 0.3fr 1fr;
   }
   .aboutmeContent .leftAboutmeContent img {
-    max-height: 80%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    max-height: 50%;
     margin: 15%;
     -webkit-box-shadow: 0px 0px 45px 10px #b63551;
             box-shadow: 0px 0px 45px 10px #b63551;
   }
   .aboutmeContent .centerAboutmeContent {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-    margin-left: 11%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-family: 'Quicksand', sans-serif;
     font-size: larger;
-    display: inline-block;
-    width: 28%;
     color: #ffffff;
     text-align: center;
-  }
-  .aboutmeContent .rightAboutmeContent {
-    display: inline-block;
+    position: relative;
   }
   .aboutmeContent .rightAboutmeContent img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     -webkit-box-shadow: 40px 40px 25px #b63551;
             box-shadow: 40px 40px 25px #b63551;
-    max-height: 65%;
-    margin-top: 30%;
-    margin-left: 22%;
+    max-width: 70%;
+    margin: 15%;
   }
   .portifolioContent {
     background-color: transparent;
@@ -167,7 +159,6 @@
     display: -ms-inline-flexbox;
     display: inline-flex;
     width: 25%;
-    padding-top: 2%;
   }
   .portifolioContent .leftPortifolioContent img {
     max-height: 80%;
