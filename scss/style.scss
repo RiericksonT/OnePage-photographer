@@ -20,64 +20,76 @@ html {
 body {
     // overflow-x: hidden;
     background-color: $background;
+
     img {
         image-rendering: pixelated;
     }
 
-    font: 400 1rem 'Montserrat', sans-serif;
+    font: 400 1rem 'Montserrat',
+    sans-serif;
 }
 
 @media screen and (min-width: 800px) {
-    #container-initial{
+    #container-initial {
+        margin-bottom: 5%;
         display: flex;
         justify-content: center;
+
         img {
             margin-left: 25%;
-          border-radius: 10px 0 0 10px;
+            border-radius: 10px 0 0 10px;
         }
-        .menu{
-          margin-top: 2rem;
-          ul {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        
-            padding: 0.5rem;
-            list-style: none;
-        
-            a{
-              color: $primaryColor;
-              text-decoration: none;
+
+        .menu {
+            margin-left: 4%;
+            margin-top: 2rem;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                padding: 0.5rem;
+                list-style: none;
+
+                a {
+                    color: $primaryColor;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $colorRose;
+                    }
+                }
+
+                li {
+                    font-size: 1.4rem;
+
+                    &+li {
+                        margin-left: 2rem;
+                    }
+                }
             }
-        
-            li{
-              font-size: 1.4rem;
-              & + li{
-                margin-left: 1rem;
-              }
+
+            .text-header {
+                margin-top: 50%;
+
+                h2 {
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                }
+
+                h1 {
+                    font-size: 3.75rem;
+                }
             }
-          }
-        
-          .text-header{
-            margin-top: 50%;
-            h2 {
-              font-weight: 400;
-              font-size: 1.8rem;
-            }
-            h1 {
-              font-size: 3.75rem;
-            }
-            
-          }
         }
-      
     }
 
     .aboutmeContent {
         width: 100%;
         height: 80vh;
         background-color: $transparentColor;
-        margin-bottom: 10%;
+        margin-bottom: 15%;
         // display: inline-flex;
         // flex-direction: row;
 
@@ -169,13 +181,13 @@ body {
 
             h2 {
                 color: $primaryColor;
-    
+
                 font-size: 30px;
                 letter-spacing: 0.055em;
             }
 
             p {
-    
+
                 font-size: 20px;
                 font-weight: 600;
             }
@@ -200,7 +212,7 @@ body {
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-        
+
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -214,7 +226,7 @@ body {
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-        
+
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -222,8 +234,11 @@ body {
                 }
 
                 button {
+                    width: 30%;
+                    height: 10%;
                     color: $primaryColor;
                     border: 2px solid $primaryColor;
+                    border-radius: 5px;
 
                     &:hover {
                         color: $colorWhite;
@@ -248,14 +263,14 @@ body {
 
             h2 {
                 color: $primaryColor;
-    
+
                 font-size: 50px;
                 font-weight: bold;
                 letter-spacing: 0.055em;
             }
 
             p {
-    
+
                 font-size: 25px;
                 text-align: center;
                 margin: 10%;
@@ -381,10 +396,11 @@ body {
 
     .nav-dots {
         width: 100%;
-        bottom: -50px;
         height: 11px;
         display: block;
         position: relative;
+        margin: auto;
+        bottom: -200px;
         text-align: center;
 
         a {
@@ -397,8 +413,7 @@ body {
         }
 
         h3 {
-            margin-top: 35%;
-
+            margin-top: 400px;
             font-size: 20px;
             font-weight: bold;
             text-decoration: none;
@@ -431,57 +446,75 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-    #container-initial{
+    #container-initial {
+
+        margin-bottom: 20%;
         display: flex;
         flex-direction: column;
         justify-content: center;
+
         img {
-            width: 605px;
-            height: 660px;
+            z-index: -2;
+            margin-top: 20%;
+            position: absolute;
+            width: 135%;
+            height: 80vh;
             border-radius: 10px;
         }
-        .menu{
-          margin-top: 2rem;
-          ul {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        
-            padding: 0.5rem;
-            list-style: none;
-        
-            a{
-              color: $primaryColor;
-              text-decoration: none;
+
+        .menu {
+            color: $colorWhite;
+            margin-top: 2rem;
+
+            ul {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+
+                padding: 0.5rem;
+                list-style: none;
+
+                a {
+                    color: $colorWhite;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $colorRose;
+                    }
+                }
+
+                li {
+                    margin-left: 5%;
+                    font-size: 1.5rem;
+
+                    &+li {
+                        margin-left: 1.5rem;
+                    }
+                }
             }
-        
-            li{
-              font-size: 1.4rem;
-              & + li{
-                margin-left: 1rem;
-              }
+
+            .text-header {
+                margin-top: 80%;
+
+                h2 {
+                    font-weight: 400;
+                    font-size: 1.8rem;
+                }
+
+                h1 {
+                    font-size: 3.7rem;
+                }
+
             }
-          }
-        
-          .text-header{
-            margin-top: 5%;
-            h2 {
-              font-weight: 400;
-              font-size: 1.8rem;
-            }
-            h1 {
-              font-size: 3.7rem;
-            }
-            
-          }
         }
-      
+
     }
+
     .aboutmeContent {
         width: 100%;
         background-color: $transparentColor;
         margin-bottom: 10%;
-
+        margin-top: 70%;
 
         figure {
             display: flex;
@@ -541,6 +574,7 @@ body {
         height: 90%;
         display: block;
         margin: auto;
+        margin-left: 15%;
         position: relative;
     }
 
@@ -670,9 +704,9 @@ body {
     }
 
     .portifolioContent {
-
+        margin-top: 30%;
         background-color: $transparentColor;
-        height: 90vh;
+        height: 60vh;
         width: 100%;
 
         .leftPortifolioContent {
@@ -682,7 +716,8 @@ body {
             h2 {
                 color: $primaryColor;
                 margin-left: 10%;
-    
+                margin-bottom: 15%;
+
                 font-size: 50px;
                 font-weight: bold;
             }
@@ -690,6 +725,7 @@ body {
     }
 
     .contactContent {
+        margin-left: 15%;
         color: $primaryColor;
         background-color: $transparentColor;
         width: 100%;
@@ -708,12 +744,12 @@ body {
 
             h2 {
                 color: $primaryColor;
-    
+
                 font-size: 20px;
             }
 
             p {
-    
+
                 font-size: 15px;
                 font-weight: 600;
             }
@@ -738,7 +774,7 @@ body {
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-        
+
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -752,7 +788,7 @@ body {
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-        
+
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -786,13 +822,13 @@ body {
 
             h2 {
                 color: $primaryColor;
-    
+
                 font-size: 30px;
                 font-weight: bold;
             }
 
             p {
-    
+
                 font-size: 15px;
                 text-align: center;
                 margin: 10%;
@@ -808,7 +844,7 @@ body {
 
     footer {
         background-color: $primaryColor;
-        width: 103%;
+        width: 135%;
         height: 12vh;
         display: flex;
         flex-direction: row;

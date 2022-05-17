@@ -24,6 +24,7 @@ body img {
 
 @media screen and (min-width: 800px) {
   #container-initial {
+    margin-bottom: 5%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -36,6 +37,7 @@ body img {
     border-radius: 10px 0 0 10px;
   }
   #container-initial .menu {
+    margin-left: 4%;
     margin-top: 2rem;
   }
   #container-initial .menu ul {
@@ -55,11 +57,14 @@ body img {
     color: #111111;
     text-decoration: none;
   }
+  #container-initial .menu ul a:hover {
+    color: #b63551;
+  }
   #container-initial .menu ul li {
     font-size: 1.4rem;
   }
   #container-initial .menu ul li + li {
-    margin-left: 1rem;
+    margin-left: 2rem;
   }
   #container-initial .menu .text-header {
     margin-top: 50%;
@@ -75,7 +80,7 @@ body img {
     width: 100%;
     height: 80vh;
     background-color: transparent;
-    margin-bottom: 10%;
+    margin-bottom: 15%;
   }
   .aboutmeContent figure {
     display: -webkit-box;
@@ -227,8 +232,11 @@ body img {
     outline: none;
   }
   .contactContent .leftContactContent form button {
+    width: 30%;
+    height: 10%;
     color: #111111;
     border: 2px solid #111111;
+    border-radius: 5px;
   }
   .contactContent .leftContactContent form button:hover {
     color: #ffffff;
@@ -386,10 +394,11 @@ body img {
   }
   .nav-dots {
     width: 100%;
-    bottom: -50px;
     height: 11px;
     display: block;
     position: relative;
+    margin: auto;
+    bottom: -200px;
     text-align: center;
   }
   .nav-dots a {
@@ -400,7 +409,7 @@ body img {
     color: #b63551;
   }
   .nav-dots h3 {
-    margin-top: 35%;
+    margin-top: 400px;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -430,6 +439,7 @@ body img {
 
 @media screen and (max-width: 800px) {
   #container-initial {
+    margin-bottom: 20%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -442,11 +452,15 @@ body img {
             justify-content: center;
   }
   #container-initial img {
-    width: 605px;
-    height: 660px;
+    z-index: -2;
+    margin-top: 20%;
+    position: absolute;
+    width: 135%;
+    height: 80vh;
     border-radius: 10px;
   }
   #container-initial .menu {
+    color: #ffffff;
     margin-top: 2rem;
   }
   #container-initial .menu ul {
@@ -463,17 +477,21 @@ body img {
     list-style: none;
   }
   #container-initial .menu ul a {
-    color: #111111;
+    color: #ffffff;
     text-decoration: none;
   }
+  #container-initial .menu ul a:hover {
+    color: #b63551;
+  }
   #container-initial .menu ul li {
-    font-size: 1.4rem;
+    margin-left: 5%;
+    font-size: 1.5rem;
   }
   #container-initial .menu ul li + li {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
   }
   #container-initial .menu .text-header {
-    margin-top: 5%;
+    margin-top: 80%;
   }
   #container-initial .menu .text-header h2 {
     font-weight: 400;
@@ -486,6 +504,7 @@ body img {
     width: 100%;
     background-color: transparent;
     margin-bottom: 10%;
+    margin-top: 70%;
   }
   .aboutmeContent figure {
     display: -webkit-box;
@@ -540,6 +559,7 @@ body img {
     height: 90%;
     display: block;
     margin: auto;
+    margin-left: 15%;
     position: relative;
   }
   .slides-front * {
@@ -651,8 +671,9 @@ body img {
     background: rgba(0, 0, 0, 0.8);
   }
   .portifolioContent {
+    margin-top: 30%;
     background-color: transparent;
-    height: 90vh;
+    height: 60vh;
     width: 100%;
   }
   .portifolioContent .leftPortifolioContent {
@@ -664,10 +685,12 @@ body img {
   .portifolioContent .leftPortifolioContent h2 {
     color: #111111;
     margin-left: 10%;
+    margin-bottom: 15%;
     font-size: 50px;
     font-weight: bold;
   }
   .contactContent {
+    margin-left: 15%;
     color: #111111;
     background-color: transparent;
     width: 100%;
@@ -803,7 +826,7 @@ body img {
   }
   footer {
     background-color: #111111;
-    width: 103%;
+    width: 135%;
     height: 12vh;
     display: -webkit-box;
     display: -ms-flexbox;
