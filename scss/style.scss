@@ -335,147 +335,498 @@ $colorRose:rgb(182, 53, 81);
         }
 
     }
-}
 
+    //Definicoes do slider 
 
+    .div-slider {
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
 
-//Definicoes do slider 
+    .slides-front {
+        padding: 0;
+        width: 90%;
+        height: 90%;
+        display: block;
+        margin: auto;
+        position: relative;
+    }
 
-.div-slider {
-    width: auto;
-    height: auto;
-    text-align: center;
-}
+    .slides-front * {
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+    }
 
-.slides-front {
-    padding: 0;
-    width: 90%;
-    height: 90%;
-    display: block;
-    margin: auto;
-    position: relative;
-}
+    .slides-front input {
+        display: none;
+    }
 
-.slides-front * {
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-}
+    .slide-container {
+        display: block;
+    }
 
-.slides-front input {
-    display: none;
-}
+    .slide {
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 80%;
+        display: block;
+        position: absolute;
 
-.slide-container {
-    display: block;
-}
+        transform: scale(0);
 
-.slide {
-    top: 0;
-    opacity: 0;
-    width: 100%;
-    height: 80%;
-    display: block;
-    position: absolute;
+        transition: all .5s ease-in-out 0.1s;
+    }
 
-    transform: scale(0);
+    .slide img {
+        max-width: 50%;
+    }
 
-    transition: all .5s ease-in-out 0.1s;
-}
+    .nav label {
+        display: none;
+        position: absolute;
+        align-items: center;
+        opacity: 0;
+        z-index: 9;
+        cursor: pointer;
+        transition: opacity .2s;
+        color: #FFF;
+        font-size: 156pt;
+        text-align: center;
+        line-height: 380px;
+        font-family: "Varela Round", sans-serif;
+        text-shadow: 0px 0px 15px $primaryColor;
+    }
 
-.slide img {
-    max-width: 50%;
-}
+    .slide:hover+.nav label {
+        opacity: 0.5;
+    }
 
-.nav label {
-    display: none;
-    position: absolute;
-    align-items: center;
-    opacity: 0;
-    z-index: 9;
-    cursor: pointer;
-    transition: opacity .2s;
-    color: #FFF;
-    font-size: 156pt;
-    text-align: center;
-    line-height: 380px;
-    font-family: "Varela Round", sans-serif;
-    text-shadow: 0px 0px 15px $primaryColor;
-}
+    .nav label:hover {
+        opacity: 1;
+    }
 
-.slide:hover+.nav label {
-    opacity: 0.5;
-}
+    .nav .next {
+        right: 0;
+    }
 
-.nav label:hover {
-    opacity: 1;
-}
+    input:checked+.slide-container .slide {
+        opacity: 1;
 
-.nav .next {
-    right: 0;
-}
+        transform: scale(1);
 
-input:checked+.slide-container .slide {
-    opacity: 1;
+        transition: opacity 1s ease-in-out 0.1s;
+    }
 
-    transform: scale(1);
+    input:checked+.slide-container .nav label {
+        display: block;
+    }
 
-    transition: opacity 1s ease-in-out 0.1s;
-}
+    .nav-dots {
+        width: 100%;
+        bottom: -50px;
+        height: 11px;
+        display: block;
+        position: relative;
+        text-align: center;
 
-input:checked+.slide-container .nav label {
-    display: block;
-}
+        a {
+            text-decoration: none;
+            color: $primaryColor;
 
-.nav-dots {
-    width: 100%;
-    bottom: -50px;
-    height: 11px;
-    display: block;
-    position: relative;
-    text-align: center;
+            &:hover {
+                color: $colorRose;
+            }
+        }
 
-    a {
-        text-decoration: none;
-        color: $primaryColor;
-
-        &:hover {
-            color: $colorRose;
+        h3 {
+            margin-top: 35%;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            list-style: none;
         }
     }
 
-    h3 {
-        margin-top: 35%;
-        font-family: 'Quicksand', sans-serif;
-        font-size: 20px;
-        font-weight: bold;
-        text-decoration: none;
-        list-style: none;
+    .nav-dots .nav-dot {
+        top: 375px;
+        width: 11px;
+        height: 11px;
+        margin: 0 4px;
+        position: relative;
+        border-radius: 100%;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-dots .nav-dot:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    input#img-1:checked~.nav-dots label#img-dot-1,
+    input#img-2:checked~.nav-dots label#img-dot-2,
+    input#img-3:checked~.nav-dots label#img-dot-3,
+    input#img-4:checked~.nav-dots label#img-dot-4 {
+        background: rgba(0, 0, 0, 0.8);
     }
 }
 
-.nav-dots .nav-dot {
-    top: 375px;
-    width: 11px;
-    height: 11px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 100%;
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.6);
-}
+@media screen and (max-width: 800px) {
 
-.nav-dots .nav-dot:hover {
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.8);
-}
+    body {
+        max-width: 100%;
+        background-color: $colorWhite;
+    }
 
-input#img-1:checked~.nav-dots label#img-dot-1,
-input#img-2:checked~.nav-dots label#img-dot-2,
-input#img-3:checked~.nav-dots label#img-dot-3,
-input#img-4:checked~.nav-dots label#img-dot-4 {
-    background: rgba(0, 0, 0, 0.8);
+    .aboutmeContent {
+        width: 100%;
+        background-color: $transparentColor;
+        margin-bottom: 10%;
+
+
+        figure {
+            display: flex;
+            align-items: center;
+
+            img {
+                position: relative;
+                width: 60%;
+                border: 2px solid $primaryColor;
+            }
+
+            .img1 {
+                width: 70%;
+                border: 2px solid $primaryColor;
+            }
+
+            .img2 {
+                margin-left: -35%;
+                margin-top: 20%;
+            }
+        }
+
+        p {
+            display: flex;
+            color: $primaryColor;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.3rem;
+            text-align: justify;
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+
+        h2 {
+            height: 10%;
+            position: relative;
+            color: $primaryColor;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-left: 5%;
+        }
+    }
+
+    .div-slider {
+        width: auto;
+        height: auto;
+        text-align: center;
+    }
+
+    .slides-front {
+        padding: 0;
+        width: 90%;
+        height: 90%;
+        display: block;
+        margin: auto;
+        position: relative;
+    }
+
+    .slides-front * {
+        user-select: none;
+        -ms-user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+    }
+
+    .slides-front input {
+        display: none;
+    }
+
+    .slide-container {
+        display: block;
+    }
+
+    .slide {
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 80%;
+        display: block;
+        position: absolute;
+
+        transform: scale(0);
+
+        transition: all .5s ease-in-out 0.1s;
+    }
+
+    .slide img {
+        max-width: 80%;
+    }
+
+    .nav label {
+        display: none;
+        position: absolute;
+        align-items: center;
+        opacity: 0;
+        z-index: 9;
+        cursor: pointer;
+        transition: opacity .2s;
+        color: #FFF;
+        font-size: 156pt;
+        text-align: center;
+        line-height: 380px;
+        font-family: "Varela Round", sans-serif;
+        text-shadow: 0px 0px 15px $primaryColor;
+    }
+
+    .slide:hover+.nav label {
+        opacity: 0.5;
+    }
+
+    .nav label:hover {
+        opacity: 1;
+    }
+
+    .nav .next {
+        right: 0;
+    }
+
+    input:checked+.slide-container .slide {
+        opacity: 1;
+
+        transform: scale(1);
+
+        transition: opacity 1s ease-in-out 0.1s;
+    }
+
+    input:checked+.slide-container .nav label {
+        display: block;
+    }
+
+    .nav-dots {
+        width: 100%;
+        // bottom: -50px;
+        height: 11px;
+        display: block;
+        position: relative;
+        text-align: center;
+
+        a {
+            text-decoration: none;
+            color: $primaryColor;
+
+            &:hover {
+                color: $colorRose;
+            }
+        }
+
+        h3 {
+            position: relative;
+            margin-top: 70%;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            list-style: none;
+        }
+    }
+
+    .nav-dots .nav-dot {
+        top: 375px;
+        width: 11px;
+        height: 11px;
+        margin: 0 4px;
+        position: relative;
+        border-radius: 100%;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-dots .nav-dot:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    input#img-1:checked~.nav-dots label#img-dot-1,
+    input#img-2:checked~.nav-dots label#img-dot-2,
+    input#img-3:checked~.nav-dots label#img-dot-3,
+    input#img-4:checked~.nav-dots label#img-dot-4 {
+        background: rgba(0, 0, 0, 0.8);
+    }
+
+    .portifolioContent {
+
+        background-color: $transparentColor;
+        height: 90vh;
+        width: 100%;
+
+        .leftPortifolioContent {
+            display: inline-flex;
+            width: 25%;
+
+            h2 {
+                color: $primaryColor;
+                margin-left: 10%;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 50px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .contactContent {
+        color: $primaryColor;
+        background-color: $transparentColor;
+        width: 100%;
+        height: 90%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        .leftContactContent {
+            background-color: $transparentColor;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                color: $primaryColor;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 20px;
+            }
+
+            p {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                height: 100%;
+                background-color: $transparentColor;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 10px;
+
+
+                input {
+                    width: 90%;
+                    height: 5%;
+                    border: 2px solid $primaryColor;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin: 10px;
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 20px;
+                    color: $primaryColor;
+                    background-color: $transparentColor;
+                    outline: none;
+                }
+
+                textarea {
+                    width: 90%;
+                    height: 25%;
+                    border: 2px solid $primaryColor;
+                    border-radius: 5px;
+                    padding: 10px;
+                    margin: 10px;
+                    font-family: 'Quicksand', sans-serif;
+                    font-size: 20px;
+                    color: $primaryColor;
+                    background-color: $transparentColor;
+                    outline: none;
+                }
+
+                button {
+                    color: $primaryColor;
+                    border: 2px solid $primaryColor;
+
+                    &:hover {
+                        color: $colorWhite;
+                        background-color: $primaryColor;
+                    }
+                }
+
+                ::placeholder {
+                    color: $primaryColor;
+                }
+            }
+        }
+
+        .rightContactContent {
+            background-color: $transparentColor;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            h2 {
+                color: $primaryColor;
+                font-family: 'Quicksand', sans-serif;
+                font-size: 30px;
+                font-weight: bold;
+            }
+
+            p {
+                font-family: 'Quicksand', sans-serif;
+                font-size: 15px;
+                text-align: center;
+                margin: 10%;
+                font-weight: 600;
+            }
+
+            a {
+                color: $colorRose;
+                text-decoration: none;
+            }
+        }
+    }
+
+    footer {
+        background-color: $primaryColor;
+        width: 103%;
+        height: 12vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        color: $colorWhite;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+        font-weight: bold;
+
+        a {
+            text-decoration: none;
+            color: $colorWhite;
+        }
+
+    }
 }
