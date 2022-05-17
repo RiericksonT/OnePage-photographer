@@ -393,7 +393,7 @@
     transition: all .5s ease-in-out 0.1s;
   }
   .slide img {
-    max-width: 50%;
+    max-width: 60%;
   }
   .nav label {
     display: none;
