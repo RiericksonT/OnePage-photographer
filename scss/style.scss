@@ -1,127 +1,76 @@
 // cores padrões do sistema
-$primaryColor: #000000;
+$primaryColor: #111111;
 $transparentColor: transparent;
 $hoverColor: rgb(139, 137, 137);
+$background: #F7F9F9;
 $colorWhite: #ffffff;
 $colorBlue:rgb(0, 225, 255);
 $colorRose:rgb(182, 53, 81);
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 97%;
+}
+
+body {
+    // overflow-x: hidden;
+    background-color: $background;
+    img {
+        image-rendering: pixelated;
+    }
+
+    font: 400 1rem 'Montserrat', sans-serif;
+}
+
 @media screen and (min-width: 800px) {
-    html {
-        max-width: 97%;
-    }
-
-    body {
-        // overflow-x: hidden;
-        background-color: $colorWhite;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-
-    //transparent button
-    button {
-        background-color: $transparentColor;
-        border: 2px solid $colorWhite;
-        color: $colorWhite;
-        padding: 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s;
-        width: 20%;
-
-        &:hover {
-            background-color: $colorWhite;
-            color: #000;
-        }
-    }
-
-    .mainContent {
-        background: url('/img/photo1.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: $transparentColor;
-        height: 100vh;
-        width: 100%;
+    #container-initial{
         display: flex;
-        padding: 0;
-        margin: 0;
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-
-        .leftMainContent {
-            background-color: $transparentColor;
-
-            h2 {
-                color: $colorRose;
-                font-family: 'Quicksand', sans-serif;
-                font-size: 55px;
-                font-weight: bold;
-                margin: 5%;
-                margin-left: 20%;
-                text-shadow: 2px -2px 2px #000000;
-            }
+        justify-content: center;
+        img {
+            margin-left: 25%;
+          border-radius: 10px 0 0 10px;
         }
-
-        .rightMainContent {
-            background-color: rgba(0, 0, 0, 0.6);
-            width: 100vh;
-            height: 100%;
+        .menu{
+          margin-top: 2rem;
+          ul {
             display: flex;
-            flex-direction: column;
-
-            ul {
-                font-family: 'Quicksand', sans-serif;
-                list-style: none;
-                padding: 0;
-                margin-top: 7%;
-                display: flex;
-                align-items: baseline;
-                width: 100%;
-                justify-content: space-evenly;
-
-                li {
-                    float: left;
-
-                    a {
-                        color: $colorWhite;
-                        text-decoration: none;
-                        font-size: 25px;
-                        font-weight: bold;
-                        padding: 0.2rem;
-                    }
-
-                    &:hover {
-                        a {
-                            color: $colorRose;
-                        }
-                    }
-                }
+            align-items: center;
+            justify-content: flex-start;
+        
+            padding: 0.5rem;
+            list-style: none;
+        
+            a{
+              color: $primaryColor;
+              text-decoration: none;
             }
-
+        
+            li{
+              font-size: 1.4rem;
+              & + li{
+                margin-left: 1rem;
+              }
+            }
+          }
+        
+          .text-header{
+            margin-top: 50%;
+            h2 {
+              font-weight: 400;
+              font-size: 1.8rem;
+            }
             h1 {
-                color: $colorWhite;
-                font-family: 'Quicksand', sans-serif;
-                font-size: 55px;
-                font-weight: bold;
-                text-align: center;
-                margin-top: 20%;
+              font-size: 3.75rem;
             }
-
-            p {
-                color: $colorWhite;
-                font-family: 'Quicksand', sans-serif;
-                font-size: 25px;
-                text-align: left;
-                margin: 10%;
-            }
-
-            .contact {
-                text-align: center;
-                margin-left: 60%;
-            }
+            
+          }
         }
+      
     }
 
     .aboutmeContent {
@@ -160,7 +109,7 @@ $colorRose:rgb(182, 53, 81);
         p {
             position: relative;
             color: $primaryColor;
-            font-family: 'Quicksand', sans-serif;
+
             font-size: 1.3rem;
             text-align: justify;
             margin-top: 10%;
@@ -171,9 +120,10 @@ $colorRose:rgb(182, 53, 81);
         h2 {
             position: relative;
             color: $primaryColor;
-            font-family: 'Quicksand', sans-serif;
+
             font-size: 2.5rem;
             font-weight: bold;
+            letter-spacing: 0.055em;
             margin-left: 5%;
         }
     }
@@ -192,7 +142,8 @@ $colorRose:rgb(182, 53, 81);
             h2 {
                 color: $primaryColor;
                 margin-left: 20%;
-                font-family: 'Quicksand', sans-serif;
+
+                letter-spacing: 0.055em;
                 font-size: 50px;
                 font-weight: bold;
             }
@@ -218,12 +169,13 @@ $colorRose:rgb(182, 53, 81);
 
             h2 {
                 color: $primaryColor;
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 30px;
+                letter-spacing: 0.055em;
             }
 
             p {
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 20px;
                 font-weight: 600;
             }
@@ -248,7 +200,7 @@ $colorRose:rgb(182, 53, 81);
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-                    font-family: 'Quicksand', sans-serif;
+        
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -262,7 +214,7 @@ $colorRose:rgb(182, 53, 81);
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-                    font-family: 'Quicksand', sans-serif;
+        
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -296,13 +248,14 @@ $colorRose:rgb(182, 53, 81);
 
             h2 {
                 color: $primaryColor;
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 50px;
                 font-weight: bold;
+                letter-spacing: 0.055em;
             }
 
             p {
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 25px;
                 text-align: center;
                 margin: 10%;
@@ -325,7 +278,6 @@ $colorRose:rgb(182, 53, 81);
         justify-content: space-evenly;
         align-items: center;
         color: $colorWhite;
-        font-family: 'Quicksand', sans-serif;
         font-size: 20px;
         font-weight: bold;
 
@@ -446,7 +398,7 @@ $colorRose:rgb(182, 53, 81);
 
         h3 {
             margin-top: 35%;
-            font-family: 'Quicksand', sans-serif;
+
             font-size: 20px;
             font-weight: bold;
             text-decoration: none;
@@ -479,12 +431,7 @@ $colorRose:rgb(182, 53, 81);
 }
 
 @media screen and (max-width: 800px) {
-
-    body {
-        max-width: 100%;
-        background-color: $colorWhite;
-    }
-
+    
     .aboutmeContent {
         width: 100%;
         background-color: $transparentColor;
@@ -515,7 +462,7 @@ $colorRose:rgb(182, 53, 81);
         p {
             display: flex;
             color: $primaryColor;
-            font-family: 'Quicksand', sans-serif;
+
             font-size: 1.3rem;
             text-align: justify;
             margin-left: 2%;
@@ -526,7 +473,7 @@ $colorRose:rgb(182, 53, 81);
             height: 10%;
             position: relative;
             color: $primaryColor;
-            font-family: 'Quicksand', sans-serif;
+
             font-size: 2.5rem;
             font-weight: bold;
             margin-left: 5%;
@@ -642,7 +589,7 @@ $colorRose:rgb(182, 53, 81);
         h3 {
             position: relative;
             margin-top: 70%;
-            font-family: 'Quicksand', sans-serif;
+
             font-size: 20px;
             font-weight: bold;
             text-decoration: none;
@@ -686,7 +633,7 @@ $colorRose:rgb(182, 53, 81);
             h2 {
                 color: $primaryColor;
                 margin-left: 10%;
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 50px;
                 font-weight: bold;
             }
@@ -712,12 +659,12 @@ $colorRose:rgb(182, 53, 81);
 
             h2 {
                 color: $primaryColor;
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 20px;
             }
 
             p {
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 15px;
                 font-weight: 600;
             }
@@ -742,7 +689,7 @@ $colorRose:rgb(182, 53, 81);
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-                    font-family: 'Quicksand', sans-serif;
+        
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -756,7 +703,7 @@ $colorRose:rgb(182, 53, 81);
                     border-radius: 5px;
                     padding: 10px;
                     margin: 10px;
-                    font-family: 'Quicksand', sans-serif;
+        
                     font-size: 20px;
                     color: $primaryColor;
                     background-color: $transparentColor;
@@ -790,13 +737,13 @@ $colorRose:rgb(182, 53, 81);
 
             h2 {
                 color: $primaryColor;
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 30px;
                 font-weight: bold;
             }
 
             p {
-                font-family: 'Quicksand', sans-serif;
+    
                 font-size: 15px;
                 text-align: center;
                 margin: 10%;
@@ -819,7 +766,6 @@ $colorRose:rgb(182, 53, 81);
         justify-content: space-evenly;
         align-items: center;
         color: $colorWhite;
-        font-family: 'Quicksand', sans-serif;
         font-size: 20px;
         font-weight: bold;
 

@@ -1,117 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  max-width: 97%;
+}
+
+body {
+  background-color: #F7F9F9;
+  font: 400 1rem 'Montserrat', sans-serif;
+}
+
+body img {
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+}
+
 @media screen and (min-width: 800px) {
-  html {
-    max-width: 97%;
-  }
-  body {
-    background-color: #ffffff;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-  }
-  button {
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s;
-    width: 20%;
-  }
-  button:hover {
-    background-color: #ffffff;
-    color: #000;
-  }
-  .mainContent {
-    background: url("/img/photo1.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    height: 100vh;
-    width: 100%;
+  #container-initial {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 0;
-    margin: 0;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 2fr 1fr;
-        grid-template-columns: 2fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-  .mainContent .leftMainContent {
-    background-color: transparent;
+  #container-initial img {
+    margin-left: 25%;
+    border-radius: 10px 0 0 10px;
   }
-  .mainContent .leftMainContent h2 {
-    color: #b63551;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 55px;
-    font-weight: bold;
-    margin: 5%;
-    margin-left: 20%;
-    text-shadow: 2px -2px 2px #000000;
+  #container-initial .menu {
+    margin-top: 2rem;
   }
-  .mainContent .rightMainContent {
-    background-color: rgba(0, 0, 0, 0.6);
-    width: 100vh;
-    height: 100%;
+  #container-initial .menu ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .mainContent .rightMainContent ul {
-    font-family: 'Quicksand', sans-serif;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding: 0.5rem;
     list-style: none;
-    padding: 0;
-    margin-top: 7%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    width: 100%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
   }
-  .mainContent .rightMainContent ul li {
-    float: left;
-  }
-  .mainContent .rightMainContent ul li a {
-    color: #ffffff;
+  #container-initial .menu ul a {
+    color: #111111;
     text-decoration: none;
-    font-size: 25px;
-    font-weight: bold;
-    padding: 0.2rem;
   }
-  .mainContent .rightMainContent ul li:hover a {
-    color: #b63551;
+  #container-initial .menu ul li {
+    font-size: 1.4rem;
   }
-  .mainContent .rightMainContent h1 {
-    color: #ffffff;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 55px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20%;
+  #container-initial .menu ul li + li {
+    margin-left: 1rem;
   }
-  .mainContent .rightMainContent p {
-    color: #ffffff;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 25px;
-    text-align: left;
-    margin: 10%;
+  #container-initial .menu .text-header {
+    margin-top: 50%;
   }
-  .mainContent .rightMainContent .contact {
-    text-align: center;
-    margin-left: 60%;
+  #container-initial .menu .text-header h2 {
+    font-weight: 400;
+    font-size: 1.8rem;
+  }
+  #container-initial .menu .text-header h1 {
+    font-size: 3.75rem;
   }
   .aboutmeContent {
     width: 100%;
@@ -141,7 +99,7 @@
     height: 60%;
     margin-top: 27%;
     margin-left: 5%;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
   }
   .aboutmeContent figure .img1 {
     margin-top: 22%;
@@ -151,8 +109,7 @@
   }
   .aboutmeContent p {
     position: relative;
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 1.3rem;
     text-align: justify;
     margin-top: 10%;
@@ -161,10 +118,10 @@
   }
   .aboutmeContent h2 {
     position: relative;
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 2.5rem;
     font-weight: bold;
+    letter-spacing: 0.055em;
     margin-left: 5%;
   }
   .portifolioContent {
@@ -180,14 +137,14 @@
     width: 25%;
   }
   .portifolioContent .leftPortifolioContent h2 {
-    color: #000000;
+    color: #111111;
     margin-left: 20%;
-    font-family: 'Quicksand', sans-serif;
+    letter-spacing: 0.055em;
     font-size: 50px;
     font-weight: bold;
   }
   .contactContent {
-    color: #000000;
+    color: #111111;
     background-color: transparent;
     width: 100%;
     height: 90%;
@@ -215,12 +172,11 @@
             align-items: center;
   }
   .contactContent .leftContactContent h2 {
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 30px;
+    letter-spacing: 0.055em;
   }
   .contactContent .leftContactContent p {
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: 600;
   }
@@ -244,53 +200,51 @@
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
   }
   .contactContent .leftContactContent form input {
     width: 60%;
     height: 10%;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    color: #000000;
+    color: #111111;
     background-color: transparent;
     outline: none;
   }
   .contactContent .leftContactContent form textarea {
     width: 60%;
     height: 25%;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    color: #000000;
+    color: #111111;
     background-color: transparent;
     outline: none;
   }
   .contactContent .leftContactContent form button {
-    color: #000000;
-    border: 2px solid #000000;
+    color: #111111;
+    border: 2px solid #111111;
   }
   .contactContent .leftContactContent form button:hover {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #111111;
   }
   .contactContent .leftContactContent form ::-webkit-input-placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .leftContactContent form :-ms-input-placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .leftContactContent form ::-ms-input-placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .leftContactContent form ::placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .rightContactContent {
     background-color: transparent;
@@ -311,13 +265,12 @@
             align-items: center;
   }
   .contactContent .rightContactContent h2 {
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 50px;
     font-weight: bold;
+    letter-spacing: 0.055em;
   }
   .contactContent .rightContactContent p {
-    font-family: 'Quicksand', sans-serif;
     font-size: 25px;
     text-align: center;
     margin: 10%;
@@ -328,7 +281,7 @@
     text-decoration: none;
   }
   footer {
-    background-color: #000000;
+    background-color: #111111;
     width: 103%;
     height: 12vh;
     display: -webkit-box;
@@ -345,7 +298,6 @@
         -ms-flex-align: center;
             align-items: center;
     color: #ffffff;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: bold;
   }
@@ -411,7 +363,7 @@
     text-align: center;
     line-height: 380px;
     font-family: "Varela Round", sans-serif;
-    text-shadow: 0px 0px 15px #000000;
+    text-shadow: 0px 0px 15px #111111;
   }
   .slide:hover + .nav label {
     opacity: 0.5;
@@ -442,14 +394,13 @@
   }
   .nav-dots a {
     text-decoration: none;
-    color: #000000;
+    color: #111111;
   }
   .nav-dots a:hover {
     color: #b63551;
   }
   .nav-dots h3 {
     margin-top: 35%;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -478,10 +429,6 @@
 }
 
 @media screen and (max-width: 800px) {
-  body {
-    max-width: 100%;
-    background-color: #ffffff;
-  }
   .aboutmeContent {
     width: 100%;
     background-color: transparent;
@@ -498,11 +445,11 @@
   .aboutmeContent figure img {
     position: relative;
     width: 60%;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
   }
   .aboutmeContent figure .img1 {
     width: 70%;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
   }
   .aboutmeContent figure .img2 {
     margin-left: -35%;
@@ -512,8 +459,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 1.3rem;
     text-align: justify;
     margin-left: 2%;
@@ -522,8 +468,7 @@
   .aboutmeContent h2 {
     height: 10%;
     position: relative;
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 2.5rem;
     font-weight: bold;
     margin-left: 5%;
@@ -586,7 +531,7 @@
     text-align: center;
     line-height: 380px;
     font-family: "Varela Round", sans-serif;
-    text-shadow: 0px 0px 15px #000000;
+    text-shadow: 0px 0px 15px #111111;
   }
   .slide:hover + .nav label {
     opacity: 0.5;
@@ -616,7 +561,7 @@
   }
   .nav-dots a {
     text-decoration: none;
-    color: #000000;
+    color: #111111;
   }
   .nav-dots a:hover {
     color: #b63551;
@@ -624,7 +569,6 @@
   .nav-dots h3 {
     position: relative;
     margin-top: 70%;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -662,14 +606,13 @@
     width: 25%;
   }
   .portifolioContent .leftPortifolioContent h2 {
-    color: #000000;
+    color: #111111;
     margin-left: 10%;
-    font-family: 'Quicksand', sans-serif;
     font-size: 50px;
     font-weight: bold;
   }
   .contactContent {
-    color: #000000;
+    color: #111111;
     background-color: transparent;
     width: 100%;
     height: 90%;
@@ -697,12 +640,10 @@
             align-items: center;
   }
   .contactContent .leftContactContent h2 {
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 20px;
   }
   .contactContent .leftContactContent p {
-    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     font-weight: 600;
   }
@@ -730,48 +671,46 @@
   .contactContent .leftContactContent form input {
     width: 90%;
     height: 5%;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    color: #000000;
+    color: #111111;
     background-color: transparent;
     outline: none;
   }
   .contactContent .leftContactContent form textarea {
     width: 90%;
     height: 25%;
-    border: 2px solid #000000;
+    border: 2px solid #111111;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
-    color: #000000;
+    color: #111111;
     background-color: transparent;
     outline: none;
   }
   .contactContent .leftContactContent form button {
-    color: #000000;
-    border: 2px solid #000000;
+    color: #111111;
+    border: 2px solid #111111;
   }
   .contactContent .leftContactContent form button:hover {
     color: #ffffff;
-    background-color: #000000;
+    background-color: #111111;
   }
   .contactContent .leftContactContent form ::-webkit-input-placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .leftContactContent form :-ms-input-placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .leftContactContent form ::-ms-input-placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .leftContactContent form ::placeholder {
-    color: #000000;
+    color: #111111;
   }
   .contactContent .rightContactContent {
     background-color: transparent;
@@ -792,13 +731,11 @@
             align-items: center;
   }
   .contactContent .rightContactContent h2 {
-    color: #000000;
-    font-family: 'Quicksand', sans-serif;
+    color: #111111;
     font-size: 30px;
     font-weight: bold;
   }
   .contactContent .rightContactContent p {
-    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
     text-align: center;
     margin: 10%;
@@ -809,7 +746,7 @@
     text-decoration: none;
   }
   footer {
-    background-color: #000000;
+    background-color: #111111;
     width: 103%;
     height: 12vh;
     display: -webkit-box;
@@ -826,7 +763,6 @@
         -ms-flex-align: center;
             align-items: center;
     color: #ffffff;
-    font-family: 'Quicksand', sans-serif;
     font-size: 20px;
     font-weight: bold;
   }
