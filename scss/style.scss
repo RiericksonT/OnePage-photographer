@@ -431,7 +431,52 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-    
+    #container-initial{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            width: 605px;
+            height: 660px;
+            border-radius: 10px;
+        }
+        .menu{
+          margin-top: 2rem;
+          ul {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        
+            padding: 0.5rem;
+            list-style: none;
+        
+            a{
+              color: $primaryColor;
+              text-decoration: none;
+            }
+        
+            li{
+              font-size: 1.4rem;
+              & + li{
+                margin-left: 1rem;
+              }
+            }
+          }
+        
+          .text-header{
+            margin-top: 5%;
+            h2 {
+              font-weight: 400;
+              font-size: 1.8rem;
+            }
+            h1 {
+              font-size: 3.7rem;
+            }
+            
+          }
+        }
+      
+    }
     .aboutmeContent {
         width: 100%;
         background-color: $transparentColor;
@@ -444,12 +489,14 @@ body {
 
             img {
                 position: relative;
-                width: 60%;
+                width: 40%;
                 border: 2px solid $primaryColor;
+
+                margin-left: 4%;
             }
 
             .img1 {
-                width: 70%;
+                width: 50%;
                 border: 2px solid $primaryColor;
             }
 
@@ -465,6 +512,8 @@ body {
 
             font-size: 1.3rem;
             text-align: justify;
+            max-width: 550px;
+            margin-top: 2%;
             margin-left: 2%;
             margin-right: 2%;
         }
