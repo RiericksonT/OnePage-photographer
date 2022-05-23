@@ -1,6 +1,5 @@
 * {
   padding: 0;
-  margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -317,6 +316,7 @@ body img {
     width: auto;
     height: auto;
     text-align: center;
+    margin: 0%;
   }
   .slides-front {
     padding: 0;
@@ -438,6 +438,9 @@ body img {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    max-width: 100%;
+  }
   #container-initial {
     margin-bottom: 20%;
     display: -webkit-box;
@@ -453,10 +456,10 @@ body img {
   }
   #container-initial img {
     z-index: -2;
-    margin-top: 20%;
+    margin-top: 3%;
     position: absolute;
-    width: 135%;
-    height: 80vh;
+    width: 98%;
+    height: 100%;
     border-radius: 10px;
   }
   #container-initial .menu {
@@ -498,7 +501,7 @@ body img {
     font-size: 1.8rem;
   }
   #container-initial .menu .text-header h1 {
-    font-size: 3.7rem;
+    font-size: 2.5rem;
   }
   .aboutmeContent {
     width: 100%;
@@ -589,7 +592,7 @@ body img {
     transition: all .5s ease-in-out 0.1s;
   }
   .slide img {
-    max-width: 80%;
+    max-width: 90%;
   }
   .nav label {
     display: none;
@@ -690,9 +693,9 @@ body img {
     font-weight: bold;
   }
   .contactContent {
-    margin-left: 15%;
+    margin-left: 5%;
     color: #111111;
-    background-color: transparent;
+    background: transparent;
     width: 100%;
     height: 90%;
     display: -ms-grid;
@@ -702,7 +705,7 @@ body img {
   }
   .contactContent .leftContactContent {
     background-color: transparent;
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -727,9 +730,6 @@ body img {
     font-weight: 600;
   }
   .contactContent .leftContactContent form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -741,11 +741,9 @@ body img {
         -ms-flex-align: center;
             align-items: center;
     width: 90%;
-    height: 100%;
     background-color: transparent;
     border-radius: 5px;
     padding: 10px;
-    margin: 10px;
   }
   .contactContent .leftContactContent form input {
     width: 90%;
@@ -826,7 +824,7 @@ body img {
   }
   footer {
     background-color: #111111;
-    width: 135%;
+    width: 100%;
     height: 12vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -842,7 +840,7 @@ body img {
         -ms-flex-align: center;
             align-items: center;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
   }
   footer a {
